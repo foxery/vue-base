@@ -66,7 +66,7 @@ module.exports = {
     // Surge or Netlify already gzip all static assets for you.
     // Before setting to `true`, make sure to:
     // npm install --save-dev compression-webpack-plugin
-    productionGzip: false,
+    productionGzip: true,//<--开启gzip，但还需要服务端也开启gzip
     productionGzipExtensions: ['js', 'css'],
 
     // Run the build command with an extra argument to

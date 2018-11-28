@@ -62,8 +62,10 @@ const webpackConfig = merge(baseWebpackConfig, {
     // you can customize output by editing /index.html
     // see https://github.com/ampedandwired/html-webpack-plugin
     new HtmlWebpackPlugin({
-      filename: config.build.index,
-      template: 'index.html',
+      filename: process.env.NODE_ENV === 'production'
+        ? 'index.html'
+        : config.build.index,
+      template: 'index.dev.html',
       inject: true,
       minify: {
         removeComments: true,

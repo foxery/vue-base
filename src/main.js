@@ -4,6 +4,7 @@ import "babel-polyfill";//<--为了将es6编译后更兼容ios4.4以下的版本
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import store from './store/index';
 
 Vue.config.productionTip = false
 
@@ -11,6 +12,7 @@ Vue.config.productionTip = false
 new Vue({
   el: '#app',
   router,
+  store,
   components: { App },
   template: '<App/>'
 })

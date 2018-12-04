@@ -84,12 +84,26 @@
 </template>
 
 <script>
+import { mapGetters, mapActions } from "vuex";
+
 export default {
   name: "HelloWorld",
   data() {
     return {
       msg: "Welcome to Your Vue.js App"
     };
+  },
+  computed: {
+    ...mapGetters(["top"])
+  },
+  mounted(){
+    //修改state
+    this.recordTop();
+    // 获取state
+    console.log(this.top);
+  },
+  methods: {
+    ...mapActions(["recordTop"])
   }
 };
 </script>

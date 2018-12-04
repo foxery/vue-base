@@ -85,6 +85,7 @@
 
 <script>
 import { mapGetters, mapActions } from "vuex";
+import { Request } from "../service/request";
 
 export default {
   name: "HelloWorld",
@@ -96,11 +97,17 @@ export default {
   computed: {
     ...mapGetters(["top"])
   },
-  mounted(){
+  mounted() {
     //修改state
     this.recordTop();
     // 获取state
     console.log(this.top);
+    //进行异步请求
+    Request().then(data => {
+      console.log(data);
+    }).catch(()=>{
+      console.log('error');
+    });
   },
   methods: {
     ...mapActions(["recordTop"])

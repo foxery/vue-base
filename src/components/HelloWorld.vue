@@ -108,6 +108,8 @@ export default {
     }).catch(()=>{
       console.log('error');
     });
+    //使用toast
+    this.$toast({ content: "toast" });
   },
   methods: {
     ...mapActions(["recordTop"])

@@ -7,6 +7,10 @@ import App from './App'
 import router from './router'
 import store from './store/index';
 
+//引入全局toast
+import toast from './util/toast'
+Vue.use(toast);
+
 Vue.config.productionTip = false
 
 // 添加请求拦截器

@@ -66,8 +66,8 @@ export default {
       var selfW = this.$refs.mToast.offsetWidth;
       var selfH = this.$refs.mToast.offsetHeight;
       if (selfW && selfH) {
-        this.$refs.mToast.style.left = (w - selfW - 30) / 2 + "px";
-        this.$refs.mToast.style.top = (w - selfH - 30) / 2 + "px";
+        this.$refs.mToast.style.left = (w - selfW) / 2 + "px";
+        this.$refs.mToast.style.top = (h - selfH) / 2 + "px";
       }
     }
   },

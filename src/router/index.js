@@ -1,6 +1,8 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+
 const HelloWorld = r => require.ensure([], () => r(require('@/components/HelloWorld')), 'HelloWorld')
+const TextVeticalScroll = r => require.ensure([], () => r(require('@/views/textVeticalScroll')), 'TextVeticalScroll')
 
 if (process.env.NODE_ENV === 'development') {
   //使用cdn就不需要use
@@ -13,6 +15,11 @@ export default new Router({
       path: '/',
       name: 'HelloWorld',
       component: HelloWorld
+    },
+    {
+      path: '/scroll',
+      name: 'TextVeticalScroll',
+      component: TextVeticalScroll
     }
   ]
 })

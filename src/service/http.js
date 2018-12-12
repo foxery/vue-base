@@ -1,6 +1,5 @@
 import axios from 'axios'
 import qs from 'qs'
-import Vue from 'vue'
 
 export function Get(url, data) {
     return new Promise((resolve, reject) => {

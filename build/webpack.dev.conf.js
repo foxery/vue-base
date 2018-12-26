@@ -49,7 +49,7 @@ const devWebpackConfig = merge(baseWebpackConfig, {
       'process.env': require('../config/dev.env'),
       API_HOST:'"/api"'//<--此处用于设置全局变量，注意单双引号 此变量用于本地环境接口请求域名
     }),
-    new webpack.HotModuleReplacementPlugin(),
+    new webpack.HotModuleReplacementPlugin(),//<--这里用了这个热修复插件 就不要在package.json里加--hot了，不然会报Maximum call stack size exceeded错误
     new webpack.NamedModulesPlugin(), // HMR shows correct file names in console on update.
     new webpack.NoEmitOnErrorsPlugin(),
     // https://github.com/ampedandwired/html-webpack-plugin

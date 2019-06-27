@@ -30,6 +30,7 @@
   </div>
 </template>
 <script>
+/* 文本垂直轮播组件 */
 export default {
   props: {
     height: {

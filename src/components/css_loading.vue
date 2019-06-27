@@ -32,6 +32,7 @@
 </template>
 
 <script>
+/**动态圆环进度条加载组件 */
 export default {
   name: "CssLoading",
   data() {

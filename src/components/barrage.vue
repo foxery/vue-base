@@ -16,6 +16,7 @@
   </div>
 </template>
 <script>
+/**模拟弹幕组件 */
 export default {
   name: "Barrage",
   data() {
